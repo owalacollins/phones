@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/f3ff5a8056.js" crossorigin="anonymous"></script>
+   <link rel="stylesheet" href="index.css">
+   <!-- time-->
+
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@1,700&display=swap" rel="stylesheet">
+    <title>Document</title>
+</head>
+<body>
+    <nav>
+        <a href="#"><i class="fa-solid fa-phone"></i></a>
+        <a href="#"><i class="fa-brands fa-apple"></i></a>
+        <a href="#"><i class="fa-solid fa-cart-arrow-down"></i></a>
+    </nav>
+    <header>
+        <h1 id="time"></h1>
+        <div class="heading">
+            <h1>LET THE POWER LOVE THE PRICE</h1>
+            <h4>With apple Trade in,You can get credit towards a new phone when you trade in an eligible smartphone,
+                its good for you and the planet
+            </h4>
+            
+            <i style="color:white;" class="fa-solid fa-mobile-screen-button"></i>
+            
+           
+        </div>
+    </header>
+    <main>
+       <div class="details">
+<img src="images/power.svg" alt="">
+<h5>GRETNESS NEVER ENDS BUT EVOLVES</h5>
+       </div> 
+       <div class="shop">
+        <h3>shop <i class="fa-solid fa-cart-arrow-down"></i></h3>
+       </div> 
+       <div class="items">
+        <div class="responsive ">
+            <img src="images/image2.png" alt="">
+            <div class="des">
+               <h5> lorem ipsum dolor</h5>
+               <p>1000/=</p>
+               <button>+</button>
+
+            </div>
+        </div>
+
+        <div class="responsive">
+            <img src="images/image3.png" alt="">
+            <div class="des">
+               <h5> lorem ipsum dolor</h5>
+               <p>1000/=</p>
+               <button>+</button>
+
+            </div>
+        </div>
+
+        <div class="responsive">
+            <img src="images/image4.png" alt="">
+            <div class="des">
+               <h5> lorem ipsum dolor</h5>
+               <p>1000/=</p>
+               <button>+</button>
+
+            </div>
+        </div>
+
+        <div class="responsive">
+            <img src="images/head4.png" alt="">
+            <div class="des">
+               <h5> lorem ipsum dolor</h5>
+               <p>1000/=</p>
+               <button>+</button>
+
+            </div>
+        </div>
+
+        <div class="responsive">
+            <img src="images/image5.png" alt="">
+            <div class="des">
+               <h5> lorem ipsum dolor</h5>
+               <p>1000/=</p>
+               <button>+</button>
+
+            </div>
+        </div>
+       </div> 
+       <div class="design">
+        designed by einstein
+       </div>
+    </main>
+</body>
+<script>
+window.addEventListener('scroll',()=>{
+    let content= document.querySelector('.items');
+    let contentposition=content.getBoundingClientRect().top;
+    let screenPosition= window.innerHeight/1.5;
+    
+    if(contentposition< screenPosition){
+        content.classList.add('active');
+    }else{
+        content.classList.remove('active');
+    }
+}
+
+)
+
+
+function checkTime(i) {
+  if (i < 10) {
+    i = "0" + i;
+  }
+  return i;
+}
+
+function startTime() {
+  var today = new Date();
+  var h = today.getHours();
+  var m = today.getMinutes();
+  var s = today.getSeconds();
+  // add a zero in front of numbers<10
+  m = checkTime(m);
+  s = checkTime(s);
+  document.getElementById('time').innerHTML = h + ":" + m + ":" + s;
+  t = setTimeout(function() {
+    startTime()
+  }, 500);
+}
+
+startTime();
+</script>
+</html>

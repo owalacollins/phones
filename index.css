@@ -1,0 +1,134 @@
+nav{
+    background-color: rgb(206, 206, 206);
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 50px;
+
+}
+nav a{
+ color: rgb(7, 6, 6);
+ margin: 10px;
+}
+header{
+    background: linear-gradient(to bottom,rgba(0, 0, 0, 0.7),rgba(0, 0, 0, 0.7)) ,url(images/head3.png);
+    background-size: cover;
+    height: 90vh;
+    background-position: center;
+
+    text-align: center;
+    color: rgb(175, 148, 148);
+    animation-name: back;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    animation-duration: 50s;
+    animation-iteration-count: infinite;
+  
+    
+}
+@keyframes back{
+    0%{
+        background: linear-gradient(to bottom,rgba(0, 0, 0, 0.7),rgba(0, 0, 0, 0.7)) ,url(images/head5.png);
+    }
+    33%{
+        background: linear-gradient(to bottom,rgba(0, 0, 0, 0.7),rgba(0, 0, 0, 0.7)) ,url(images/head2.png);
+    }
+    66%{
+        background: linear-gradient(to bottom,rgba(0, 0, 0, 0.7),rgba(0, 0, 0, 0.7)) ,url(images/head4.png);
+    }
+    100%{
+        background: linear-gradient(to bottom,rgba(0, 0, 0, 0.7),rgba(0, 0, 0, 0.7)) ,url(images/head5.png);
+    }
+}
+.heading h1{
+    width: 70vw;
+    margin: 0 auto;
+    margin-top: 5vh;
+    color: antiquewhite;
+    animation-name: head;
+    animation-duration: 10s;
+}
+@keyframes head{
+    0%{
+        opacity: 0;
+    }
+    
+    100%{
+        opacity: 1;
+    }
+}
+.heading h4{
+    width: 70vw;
+    margin: 10vh auto 5vh auto;
+  
+
+}
+#time{
+    color: aqua;
+    font-weight: lighter;
+ 
+}
+.details{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  border: 1px solid black;
+  margin: 10% auto;
+    text-align: center;
+    width: 50vw;
+    height: 50vh;
+    color: darkcyan;
+    font-family: 'Roboto Condensed', sans-serif
+}
+.details img{
+ height: 20vw;
+}
+.shop h3{
+    background-color: crimson;
+    color: aliceblue;
+    padding: 7px 15px;
+    text-align: center;
+}
+.items{
+    opacity: 0;
+    transition: all 1s ease-in-out;
+}
+.responsive{
+    width: 90vw;
+    height: 30vh;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    align-items: center;
+    border-radius: 10px;
+    background-color: rgb(201, 200, 200);
+    margin: 10px;
+    
+
+}
+.active{
+    opacity: 1;
+    transform: scale(1);
+}
+.responsive img{
+    height: 95%;
+    
+}
+.responsive button{
+    background: transparent;
+    padding: 2% 30%;
+}
+.design{
+    background-color: rgb(172, 98, 98);
+    width: 100%;
+    color: aqua;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
